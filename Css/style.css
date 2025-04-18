@@ -71,37 +71,82 @@ section{
     padding: 5rem 9% 5rem;
 }
 
-@media(max-width:995px){
-    nav{
+/*start sidebar*/
+
+/* Mobile layout adjustments */
+@media (max-width: 995px) {
+    /* Hide the menu by default */
+
+    nav {
         position: absolute;
         display: none;
         top: 0;
         right: 0;
-        width: 40%;
+        width: 60%;  
+        height: 100%; 
+        background-color: black;
         border-left: 3px solid white;
         border-bottom-left-radius: 3px solid white;
-        padding: 1rem solid;
-        background-color: black;
-        border-color: 0.1rem solid white;
+        padding: 1rem;
+        z-index: 1000;  /*Ensuring the menu sits on top of other elements */
     }
-    nav.Active{
-     display: block;
-    }
-    nav a{
+
+    /*Display menu when it has 'Active' class */
+    nav.Active {
         display: block;
-        font-size: 2rem;
-        margin: 3rem 0;   
     }
+
+    nav a {
+        display: block;
+        font-size: 2.5rem;  
+        margin: 2rem 0;   
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Menu style when active */
     nav:hover,
-    nav.Active{
+    nav.Active {
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5s solid black;
     }
-    
+
+    /* Hamburger icon (visible on mobile) */
+    .hamburger {
+        font-size: 2.5rem;  
+        color: white;
+        cursor: pointer;
+        display: block;
+        z-index: 2000; 
+    }
+
+    /* Logo (optional: hide on mobile if needed) */
+    .logo {
+        font-size: 2rem;
+        color: white;
+    }
 }
 
-        /*end top bar*/
+/* Desktop Styles */
+@media (min-width: 996px) {
+
+    nav {
+        display: flex;
+        position: static;
+        margin-left: auto;
+    }
+
+    nav a {
+        margin: 0 1rem;
+    }
+}
+
+    .hamburger{
+        display: none;
+    }
+
+ /*end sidebar*/
 
 .home{
     display: flex;
