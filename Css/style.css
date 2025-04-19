@@ -368,3 +368,297 @@ p{
 .image img{
     width: 100%;
 }
+/* Projects page */
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.title .section-title {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Linhas decorativas abaixo do título */
+.title .section-title::before,
+.title .section-title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: darkorchid;
+    left: 0;
+    bottom: 0;
+}
+.content .col-left .content-title{
+    width: 70%;
+    font-size: 40px;
+}
+
+.content .col-left .paragraph-text{
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.content .col-left .experience{
+    display: flex;
+    align-items: center;
+}
+
+.content .col-left .num{
+    color: white;
+    font-size: 80px;
+}
+
+.content .col-left .exp{
+    color: white;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+
+/*barra de skill*/
+
+.skill {
+    background: black;
+}
+
+.skill .content {
+    padding: 50px 0; /* Aumenta o padding para dar mais espaçamento */
+}
+
+.skill .skill-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-details .text {
+    width: 45%; /* Aumenta a largura do texto */
+}
+
+.skill-details p {
+    color: white;
+    text-align: justify;
+}
+
+.skill .skill-details .experience {
+    display: flex;
+    align-items: center;
+    margin: 0 15px; /* Aumenta a margem entre os itens */
+}
+
+.skill-details .experience .num {
+    color: white;
+    font-size: 100px; /* Aumenta o tamanho do número */
+}
+
+.skill-details .experience .exp {
+    color: white;
+    margin-left: 20px;
+    font-size: 35px; /* Aumenta o tamanho da experiência */
+}
+
+.skill-details {
+    width: calc(100% / 2 - 2px);
+    margin: 30px 0; /* Aumenta a margem */
+}
+
+.skills {
+    background-color: black;
+}
+
+.skills .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 30px; /* Aumenta o espaço superior */
+}
+
+.skills .content .col-left {
+    position: relative;
+    width: 48%; /* Aumenta a largura da coluna da esquerda */
+}
+
+.skills .content .col-left .content-title {
+    margin-bottom: 25px; /* Aumenta o espaço abaixo do título */
+}
+
+.skills .content .col-right {
+    position: relative;
+    width: 45%; /* Aumenta a largura da coluna da direita */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Aumenta o espaço entre os itens */
+    justify-content: center;
+}
+
+.skills .content .col-right .bar {
+    border-radius: 15px; /* Borda mais arredondada */
+    width: 140px; /* Aumenta a largura do círculo */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo da info */
+.skills .content .col-right .bar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px; /* Aumenta o espaço entre o nome e a porcentagem */
+}
+
+/* Nome da linguagem */
+.skills .content .col-right .bar .text {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px; /* Aumenta o tamanho do texto */
+    margin-top: 12px; /* Aumenta o espaço superior */
+}
+
+/* Estilo do círculo */
+.skills .content .col-right .bar .line {
+    position: relative;
+    width: 150px; /* Aumenta o tamanho do círculo */
+    height: 150px; /* Aumenta o tamanho do círculo */
+    border-radius: 50%;
+    background: conic-gradient(darkorchid 0%, #ffffff2b 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+/* Círculo interno preto (buraco do pneu) */
+.skills .content .col-right .bar .line::before {
+    content: "";
+    position: absolute;
+    width: 120px; /* Aumenta o tamanho do buraco */
+    height: 120px; /* Aumenta o tamanho do buraco */
+    background-color: black;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Porcentagem no centro do círculo (pneu) */
+.skills .content .col-right .bar .line .porcent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px; /* Aumenta o tamanho da porcentagem */
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Gradientes por linguagem */
+.skills .content .col-right .bar .html {
+    background: conic-gradient(darkorchid 0% 75.4%, #ffffff2b 75.4%);
+}
+
+.skills .content .col-right .bar .css {
+    background: conic-gradient(darkorchid 0% 86.97%, #ffffff2b 86.97%);
+}
+
+.skills .content .col-right .bar .javascript {
+    background: conic-gradient(darkorchid 0% 2.58%, #ffffff2b 2.58%);
+}
+
+.skills .content .col-right .bar .python {
+    background: conic-gradient(darkorchid 0% 10.45%, #ffffff2b 10.45%);
+}
+
+.skills .content .col-right .bar .php {
+    background: conic-gradient(darkorchid 0% 5%, #ffffff2b 5%);
+}
+
+.skills .content .col-right .bar .design {
+    background: conic-gradient(darkorchid 0% 64%, #ffffff2b 65%);
+}
+
+/* Efeitos de hover: Ao passar o cursor sobre um item específico */
+.skills .content .col-right .bar:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do item */
+    opacity: 1; /* Faz o item atual ficar totalmente visível */
+    z-index: 2; /* Coloca o item acima dos outros */
+}
+
+/* Efeitos de hover nos outros itens: Ao passar o cursor sobre um item, os outros diminuem de tamanho e ficam desfocados */
+.skills .content .col-right .bar {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave para todos os itens */
+}
+
+.skills .content .col-right .bar:not(:hover) {
+    opacity: 0.5; /* Desfoca os outros itens */
+    transform: scale(0.9); /* Diminui o tamanho dos itens não selecionados */
+}
+
+/* Alteração na fonte da porcentagem ao passar o cursor sobre o item */
+.skills .content .col-right .bar:hover .info span {
+    font-size: 22px; /* Tamanho da fonte da porcentagem ao passar o mouse */
+    transition: font-size 0.3s ease; /* Animação suave do tamanho da fonte */
+}
+
+body {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*mobile adaptação*/
+
+@media (max-width: 768px) {
+    .skills .content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills .content .col-left,
+    .skills .content .col-right {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .skill-details {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .skill-details .text,
+    .skill-details .experience {
+      width: 100%;
+      margin: 15px 0;
+    }
+  
+    .skill-details .experience .num {
+      font-size: 60px;
+    }
+  
+    .skill-details .experience .exp {
+      font-size: 24px;
+    }
+  }
