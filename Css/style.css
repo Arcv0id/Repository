@@ -71,70 +71,76 @@ section{
     padding: 5rem 9% 5rem;
 }
 
-/*start sidebar*/
+/*sidebar inico*/
 
-/* Mobile layout adjustments */
+/* Ícone escondido no desktop */
+.hamburger {
+    display: none;
+}
+
+/* Ajustes no layout mobile */
 @media (max-width: 995px) {
-    /* Hide the menu by default */
-
+    /* Menu lateral oculto por padrão com transição */
     nav {
         position: absolute;
-        display: none;
         top: 0;
         right: 0;
-        width: 60%;  
-        height: 100%; 
+        width: 60%;
+        height: 100%;
         background-color: black;
-        border-left: 3px solid white;
-        border-bottom-left-radius: 3px solid white;
+        
         padding: 1rem;
-        z-index: 1000;  /*Ensuring the menu sits on top of other elements */
+        z-index: 1000;
+
+        /* Transição suave */
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        pointer-events: none; /* Previne clique fora do estado ativo */
     }
 
-    /*Display menu when it has 'Active' class */
+    /* Quando o menu está ativo */
     nav.Active {
-        display: block;
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: all;
     }
 
     nav a {
         display: block;
-        font-size: 2.5rem;  
-        margin: 2rem 0;   
+        font-size: 2.5rem;
+        margin: 2rem 0;
         color: white;
         text-decoration: none;
+        transition: color 1s ease;
     }
 
-    /* Menu style when active */
-    nav:hover,
-    nav.Active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5s solid black;
-    }
-
-    /* Hamburger icon (visible on mobile) */
+    /* Ícone de hambúrguer (visível no mobile) */
     .hamburger {
-        font-size: 2.5rem;  
+        font-size: 2.5rem;
         color: white;
         cursor: pointer;
         display: block;
-        z-index: 2000; 
+        z-index: 2000;
+        transition: color 0.3s ease;
     }
 
-    /* Logo (optional: hide on mobile if needed) */
+    /* Logo (opcional) */
     .logo {
         font-size: 2rem;
         color: white;
     }
 }
 
-/* Desktop Styles */
+/* Estilos para desktop */
 @media (min-width: 996px) {
-
     nav {
         display: flex;
         position: static;
         margin-left: auto;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: all !important;
     }
 
     nav a {
@@ -142,11 +148,8 @@ section{
     }
 }
 
-    .hamburger{
-        display: none;
-    }
 
- /*end sidebar*/
+        /*end top bar*/
 
 .home{
     display: flex;
@@ -431,7 +434,7 @@ p{
 }
 
 .skill .content {
-    padding: 50px 0; /* Aumenta o padding para dar mais espaçamento */
+    padding: 50px 0; 
 }
 
 .skill .skill-details {
@@ -441,7 +444,7 @@ p{
 }
 
 .skill-details .text {
-    width: 45%; /* Aumenta a largura do texto */
+    width: 45%; 
 }
 
 .skill-details p {
@@ -452,23 +455,23 @@ p{
 .skill .skill-details .experience {
     display: flex;
     align-items: center;
-    margin: 0 15px; /* Aumenta a margem entre os itens */
+    margin: 0 15px; 
 }
 
 .skill-details .experience .num {
     color: white;
-    font-size: 100px; /* Aumenta o tamanho do número */
+    font-size: 100px; 
 }
 
 .skill-details .experience .exp {
     color: white;
     margin-left: 20px;
-    font-size: 35px; /* Aumenta o tamanho da experiência */
+    font-size: 35px; 
 }
 
 .skill-details {
     width: calc(100% / 2 - 2px);
-    margin: 30px 0; /* Aumenta a margem */
+    margin: 30px 0;
 }
 
 .skills {
@@ -482,30 +485,30 @@ p{
     justify-content: space-between;
     align-items: center;
     color: white;
-    margin-top: 30px; /* Aumenta o espaço superior */
+    margin-top: 30px; 
 }
 
 .skills .content .col-left {
     position: relative;
-    width: 48%; /* Aumenta a largura da coluna da esquerda */
+    width: 48%; 
 }
 
 .skills .content .col-left .content-title {
-    margin-bottom: 25px; /* Aumenta o espaço abaixo do título */
+    margin-bottom: 25px; 
 }
 
 .skills .content .col-right {
     position: relative;
-    width: 45%; /* Aumenta a largura da coluna da direita */
+    width: 45%; 
     display: flex;
     flex-wrap: wrap;
-    gap: 25px; /* Aumenta o espaço entre os itens */
+    gap: 25px; 
     justify-content: center;
 }
 
 .skills .content .col-right .bar {
-    border-radius: 15px; /* Borda mais arredondada */
-    width: 140px; /* Aumenta a largura do círculo */
+    border-radius: 15px; 
+    width: 140px; 
     height: auto;
     display: flex;
     flex-direction: column;
@@ -518,7 +521,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 12px; /* Aumenta o espaço entre o nome e a porcentagem */
+    margin-bottom: 12px; 
 }
 
 /* Nome da linguagem */
@@ -526,15 +529,15 @@ p{
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 18px; /* Aumenta o tamanho do texto */
-    margin-top: 12px; /* Aumenta o espaço superior */
+    font-size: 18px; 
+    margin-top: 12px; 
 }
 
 /* Estilo do círculo */
 .skills .content .col-right .bar .line {
     position: relative;
-    width: 150px; /* Aumenta o tamanho do círculo */
-    height: 150px; /* Aumenta o tamanho do círculo */
+    width: 150px; 
+    height: 150px;
     border-radius: 50%;
     background: conic-gradient(darkorchid 0%, #ffffff2b 0%);
     display: flex;
@@ -543,24 +546,24 @@ p{
     margin-bottom: 12px;
 }
 
-/* Círculo interno preto (buraco do pneu) */
+/* Círculo interno preto*/
 .skills .content .col-right .bar .line::before {
     content: "";
     position: absolute;
-    width: 120px; /* Aumenta o tamanho do buraco */
-    height: 120px; /* Aumenta o tamanho do buraco */
+    width: 120px;
+    height: 120px; 
     background-color: black;
     border-radius: 50%;
     z-index: 1;
 }
 
-/* Porcentagem no centro do círculo (pneu) */
+/* Porcentagem no centro do círculo*/
 .skills .content .col-right .bar .line .porcent {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px; /* Aumenta o tamanho da porcentagem */
+    font-size: 20px; 
     font-weight: bold;
     color: white;
     z-index: 2;
@@ -594,25 +597,25 @@ p{
 
 /* Efeitos de hover: Ao passar o cursor sobre um item específico */
 .skills .content .col-right .bar:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do item */
-    opacity: 1; /* Faz o item atual ficar totalmente visível */
-    z-index: 2; /* Coloca o item acima dos outros */
+    transform: scale(1.1); 
+    opacity: 1; 
+    z-index: 2; 
 }
 
-/* Efeitos de hover nos outros itens: Ao passar o cursor sobre um item, os outros diminuem de tamanho e ficam desfocados */
+/* Efeitos de desfocados */
 .skills .content .col-right .bar {
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave para todos os itens */
+    transition: transform 0.3s ease, opacity 0.3s ease; 
 }
 
 .skills .content .col-right .bar:not(:hover) {
-    opacity: 0.5; /* Desfoca os outros itens */
-    transform: scale(0.9); /* Diminui o tamanho dos itens não selecionados */
+    opacity: 0.5; 
+    transform: scale(0.9); 
 }
 
 /* Alteração na fonte da porcentagem ao passar o cursor sobre o item */
 .skills .content .col-right .bar:hover .info span {
-    font-size: 22px; /* Tamanho da fonte da porcentagem ao passar o mouse */
-    transition: font-size 0.3s ease; /* Animação suave do tamanho da fonte */
+    font-size: 22px; 
+    transition: font-size 0.3s ease; 
 }
 
 body {
