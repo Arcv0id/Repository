@@ -665,3 +665,113 @@ body {
       font-size: 24px;
     }
   }
+
+ /*Projetos*/
+
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+  
+  .project-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    width: 300px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px darkorchid;
+  }
+  
+  .projects-image {
+    display: block;
+    overflow: hidden;
+    border-radius: 1.5rem;
+  }
+  
+  .projects_img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+    display: block;
+    border-radius: 1.5rem;
+  }
+  
+  .project-card:hover .projects_img {
+    transform: scale(1.1);
+  }
+  
+  .project-data {
+    margin-top: 1rem;
+    color: #fff;
+  }
+  
+  .project-name {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+ /* Botão com borda colorida e efeito no hover */
+.btn_project {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 1s ease;
+    font-weight: bold;
+  }
+  
+  .btn_project:hover {
+    transform: scale(1.1);
+    background-color: darkorchid;
+    box-shadow: 0 0 12px darkorchid;
+    color: #ffffff;
+  }
+  
+  /* Skills: animação ao passar o mouse */
+  .project-skill img {
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-skill img:hover {
+    transform: scale(1.1);
+  }
+
+  .skills .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 0; /* Alterado de 30px para 0 */
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem 1rem; /* Reduzido de 2rem para 1rem */
+}
+
+.project {
+    margin-top: 20px; /* ou 10px, ou até 0 */
+}
